@@ -203,11 +203,11 @@ body {
   text-align: center;
 }
 
-.list-content {
+.p-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  color: #424551;
+  color: #787A80;
 }
 
 .list-content__item {
@@ -227,13 +227,6 @@ body {
   width: 16px;
   height: 16px;
   background: url(../img/svg/check.svg) no-repeat center;
-}
-
-.p-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  color: #424551;
 }
 
 .title-h-text {
@@ -1543,13 +1536,6 @@ body {
           flex: 0 1 40%;
 }
 
-.benefits__text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  color: #424551;
-}
-
 .benefits__title {
   font-weight: 900;
   font-size: 32px;
@@ -1643,35 +1629,47 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100px;
           flex: 1 0 100px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
 }
 
 .event-itams-block__mont {
   margin-left: auto;
 }
 
-.event-itams-block__content {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+.certificate-page__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
 }
 
-.event-itams-block__button {
+.certificate-page__content {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 48%;
-          flex: 0 1 48%;
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-  text-align: center;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+}
+
+.certificate-page__block-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 40px;
+}
+
+.certificate-page__img-c {
+  position: absolute;
+  left: 42%;
+  top: 0;
 }
 
 @media (min-width: 76.875em) {
@@ -1814,6 +1812,36 @@ body {
   .event-itams-block:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+
+  .certificate-page__container {
+    padding-bottom: 7.5rem;
+  }
+
+  .certificate-page__title {
+    margin-bottom: 3rem;
+  }
+
+  .certificate-page__text {
+    margin-bottom: 2rem;
+  }
+
+  .certificate-page__block-items {
+    gap: 2.5rem;
+  }
+
+  .certificate-page__img-c img {
+    width: 44.0625rem;
+  }
+}
+
+@media (max-width: 62em) {
+  .certificate-page__block-items {
+    gap: 1.25rem;
+  }
+
+  .certificate-page__img-c img {
+    width: 33.875rem;
+  }
 }
 
 @media (max-width: 767.99px) {
@@ -1940,6 +1968,33 @@ body {
     -o-object-position: 0 -38px;
        object-position: 0 -38px;
   }
+
+  .certificate-page__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .certificate-page__img-c img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-position: bottom; */
+  }
+
+  .certificate-page__img-c {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 70%;
+  }
 }
 
 @media (max-width: 61.99875em) and (max-width: 20em) {
@@ -1949,6 +2004,10 @@ body {
 
   .about__content {
     gap: 0.9375rem;
+  }
+
+  .certificate-page__img-c {
+    margin-bottom: 0.9375rem;
   }
 }
 
@@ -2078,6 +2137,18 @@ body {
   }
 
   .event-itams-block:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
+
+  .certificate-page__container {
+    padding-bottom: 1.875rem;
+  }
+
+  .certificate-page__title {
+    margin-bottom: 1.25rem;
+  }
+
+  .certificate-page__text {
     margin-bottom: 0.9375rem;
   }
 }
@@ -2223,6 +2294,41 @@ body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+
+  .event-itams-block__mont-time {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 30%;
+            flex: 0 1 30%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .event-itams-block__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .event-itams-block__button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 48%;
+            flex: 0 1 48%;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    text-align: center;
+  }
+
+  .certificate-page__block-items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -2706,6 +2812,42 @@ body {
       margin-bottom: calc(0.9375rem + 0.5625 * (100vw - 47.9375rem) / 28.9375);
     }
 }
+
+@supports (padding-bottom: clamp( 1.875rem , -7.4433045356rem  +  19.4384449244vw , 7.5rem )) {
+    .certificate-page__container {
+      padding-bottom: clamp( 1.875rem , -7.4433045356rem  +  19.4384449244vw , 7.5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , -7.4433045356rem  +  19.4384449244vw , 7.5rem )) {
+    .certificate-page__container {
+      padding-bottom: calc(1.875rem + 5.625 * (100vw - 47.9375rem) / 28.9375);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , -1.6490280778rem  +  6.0475161987vw , 3rem )) {
+    .certificate-page__title {
+      margin-bottom: clamp( 1.25rem , -1.6490280778rem  +  6.0475161987vw , 3rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , -1.6490280778rem  +  6.0475161987vw , 3rem )) {
+    .certificate-page__title {
+      margin-bottom: calc(1.25rem + 1.75 * (100vw - 47.9375rem) / 28.9375);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.9375rem , -0.8226241901rem  +  3.6717062635vw , 2rem )) {
+    .certificate-page__text {
+      margin-bottom: clamp( 0.9375rem , -0.8226241901rem  +  3.6717062635vw , 2rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , -0.8226241901rem  +  3.6717062635vw , 2rem )) {
+    .certificate-page__text {
+      margin-bottom: calc(0.9375rem + 1.0625 * (100vw - 47.9375rem) / 28.9375);
+    }
+}
 }
 
 @media (max-width: 61.99875em) and (min-width: 47.9375em) {
@@ -2798,6 +2940,52 @@ body {
 @supports not (margin-bottom: clamp( 1.875rem , 1.7582987552rem  +  7.468879668vw , 7.5rem )) {
     .events-page__container {
       margin-bottom: calc(1.875rem + 5.625 * (100vw - 1.5625rem) / 75.3125);
+    }
+}
+}
+
+@media (min-width: 62em) and (max-width: 76.875em) {
+@supports (gap: clamp( 1.25rem , -3.9600840336rem  +  8.4033613445vw , 2.5rem )) {
+    .certificate-page__block-items {
+      gap: clamp( 1.25rem , -3.9600840336rem  +  8.4033613445vw , 2.5rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , -3.9600840336rem  +  8.4033613445vw , 2.5rem )) {
+    .certificate-page__block-items {
+      gap: calc(1.25rem + 1.25 * (100vw - 62rem) / 14.875);
+    }
+}
+
+@supports (width: clamp( 33.875rem , -8.5871848739rem  +  68.487394958vw , 44.0625rem )) {
+    .certificate-page__img-c img {
+      width: clamp( 33.875rem , -8.5871848739rem  +  68.487394958vw , 44.0625rem );
+    }
+}
+
+@supports not (width: clamp( 33.875rem , -8.5871848739rem  +  68.487394958vw , 44.0625rem )) {
+    .certificate-page__img-c img {
+      width: calc(33.875rem + 10.1875 * (100vw - 62rem) / 14.875);
+    }
+}
+}
+
+@media (max-width: 61.99875em) and (min-width: 62em) {
+  .certificate-page__img-c {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media (max-width: 61.99875em) and (min-width: 20em) and (max-width: 62em) {
+@supports (margin-bottom: clamp( 0.9375rem , 0.4910714286rem  +  2.2321428571vw , 1.875rem )) {
+    .certificate-page__img-c {
+      margin-bottom: clamp( 0.9375rem , 0.4910714286rem  +  2.2321428571vw , 1.875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , 0.4910714286rem  +  2.2321428571vw , 1.875rem )) {
+    .certificate-page__img-c {
+      margin-bottom: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 42);
     }
 }
 }
