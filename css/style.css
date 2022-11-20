@@ -225,6 +225,85 @@ body {
   border: 1px solid transparent;
 }
 
+.input {
+  background: #FFFFFF;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  height: 52px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9A9CA5;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.input,
+.form-contact__textarea {
+  background: #FFFFFF;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  height: 52px;
+  padding: 13px 16px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.input:focus,
+.form-contact__textarea:focus {
+  outline: 1px solid rgba(246, 222, 116, 0.831372549);
+  -webkit-box-shadow: 3px 4px 6px 1px rgb(148, 71, 98);
+          box-shadow: 3px 4px 6px 1px rgb(148, 71, 98);
+}
+
+.form-contact__line--textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9A9CA5;
+}
+
+.input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9A9CA5;
+}
+
+.input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9A9CA5;
+}
+
+.input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9A9CA5;
+}
+
+.input::placeholder,
+.form-contact__textarea {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9A9CA5;
+}
+
 .title-kontent__text {
   font-weight: 700;
   font-size: 16px;
@@ -2166,6 +2245,52 @@ body {
   right: -27px;
 }
 
+.subscribe-page {
+  background: -o-linear-gradient(34.05deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%), url(../img/svg/illustratiodn.svg) left bottom/354px 246px no-repeat, url(../img/svg/illustratiodn.svg) right bottom/354px 246px no-repeat;
+  background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%), url(../img/svg/illustratiodn.svg) left bottom/354px 246px no-repeat, url(../img/svg/illustratiodn.svg) right bottom/354px 246px no-repeat;
+}
+
+.subscribe-page__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscribe-page__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.subscribe-page__input {
+  max-width: 422px;
+  width: 100%;
+}
+
+.subscribe-page__button {
+  max-width: 422px;
+}
+
+.title-kontent {
+  max-width: 700px;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -2429,6 +2554,18 @@ body {
   }
 
   .ourblog-page__title {
+    margin-bottom: 3.75rem;
+  }
+
+  .subscribe-page {
+    padding-top: 7.5rem;
+  }
+
+  .subscribe-page {
+    padding-bottom: 11.25rem;
+  }
+
+  .title-kontent {
     margin-bottom: 3.75rem;
   }
 }
@@ -3008,6 +3145,29 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+
+  .subscribe-page {
+    background: -o-linear-gradient(34.05deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%), url(../img/svg/illustratiodn.svg) center bottom/contain no-repeat;
+    background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%), url(../img/svg/illustratiodn.svg) center bottom/contain no-repeat;
+  }
+
+  .subscribe-page__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .subscribe-page__input {
+    width: 100%;
+  }
+
+  .subscribe-page__button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 47.99875em) and (any-hover: none) {
@@ -3103,6 +3263,20 @@ body {
 
   .team-carousel__control {
     display: none;
+  }
+}
+
+@media (max-width: 28.125em) {
+  .subscribe-page {
+    padding-top: 1.875rem;
+  }
+
+  .subscribe-page {
+    padding-bottom: 1.875rem;
+  }
+
+  .title-kontent {
+    margin-bottom: 0.9375rem;
   }
 }
 
@@ -3890,6 +4064,44 @@ body {
 @supports not (padding-bottom: clamp( 1.875rem , -4.836409396rem  +  33.5570469799vw , 11.25rem )) {
     .testimonials-carousel__body {
       padding-bottom: calc(1.875rem + 9.375 * (100vw - 20rem) / 27.9375);
+    }
+}
+}
+
+@media (min-width: 28.125em) and (max-width: 76.875em) {
+@supports (padding-top: clamp( 1.875rem , -1.3701923077rem  +  11.5384615385vw , 7.5rem )) {
+    .subscribe-page {
+      padding-top: clamp( 1.875rem , -1.3701923077rem  +  11.5384615385vw , 7.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , -1.3701923077rem  +  11.5384615385vw , 7.5rem )) {
+    .subscribe-page {
+      padding-top: calc(1.875rem + 5.625 * (100vw - 28.125rem) / 48.75);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , -3.5336538462rem  +  19.2307692308vw , 11.25rem )) {
+    .subscribe-page {
+      padding-bottom: clamp( 1.875rem , -3.5336538462rem  +  19.2307692308vw , 11.25rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , -3.5336538462rem  +  19.2307692308vw , 11.25rem )) {
+    .subscribe-page {
+      padding-bottom: calc(1.875rem + 9.375 * (100vw - 28.125rem) / 48.75);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.9375rem , -0.6850961538rem  +  5.7692307692vw , 3.75rem )) {
+    .title-kontent {
+      margin-bottom: clamp( 0.9375rem , -0.6850961538rem  +  5.7692307692vw , 3.75rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , -0.6850961538rem  +  5.7692307692vw , 3.75rem )) {
+    .title-kontent {
+      margin-bottom: calc(0.9375rem + 2.8125 * (100vw - 28.125rem) / 48.75);
     }
 }
 }
