@@ -3656,11 +3656,11 @@
                     slidesPerView: 1,
                     spaceBetween: 0
                 },
-                425: {
+                320: {
                     slidesPerView: 2,
                     spaceBetween: 10
                 },
-                700: {
+                600: {
                     slidesPerView: 3,
                     spaceBetween: 20
                 },
