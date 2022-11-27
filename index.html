@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221126112724">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221127080142">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
 				<div class="header__action action-linc">
 					<button type="button" class="action-linc__button button button--orange">Get
 						consultation</button>
-					<button data-popup="#loginregister" class="action-linc__linc">Log in / Register</button>
+					<button data-popup="#loginregister" class="action-linc__linc buttonmenuopen">Log in / Register</button>
 				</div>
 			</div>
 		</header>
@@ -793,7 +793,7 @@
 	</div>
 	<div id="loginregister" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<div class="popup__content signinblock  ">
+			<div class="popup__content signinblock active ">
 				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__text  ">
 					<h1 class="popup__title">Sign in</h1>
@@ -814,36 +814,41 @@
 							</label>
 							<a class="popup__linck linck-a" href="#">Forgot password?</a>
 						</div>
-						<button type="submit" class="popup__button button button--orange singup">Sign in</button>
-						<p class="popup__ptext column-row gray-800">Don't have an account?&#160; <a href="#" class="popup__linck linck-a">
-								Sign up</a></p>
-						<hr>
-						<p>Or sign in with</p>
-						<nav class="popup__social social-futer">
-							<ul class="social-futer__list">
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-facebook"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Twitter"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-YouTube"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-telegram"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Instagram"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Linked"></a>
-								</li>
-							</ul>
-						</nav>
+						<button type="submit" class="popup__button button button--orange  ">Sign in</button>
 					</form>
+					<p class="popup__ptext column-row gray-800">Don't have an account?&#160; <span class="popup__linck linck-a singup">
+							Sign up</span>
+					</p>
+					<hr>
+					<p>Or sign in with</p>
+					<nav class="popup__social social-futer">
+						<ul class="social-futer__list">
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-facebook"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Twitter"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-YouTube"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-telegram"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Instagram"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Linked"></a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 			<div class="popup__content signupblock">
 				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__text ">
 					<h1 class="popup__title">Sign up</h1>
-					<p>Sign in to your account using email and password provided during registration.</p>
+					<p>Registration takes less than a minute but gives you full control over your studying.</p>
 					<form class="popup__form" action="#" method="POST">
+						<p class="popup__input1  ">
+							<label class="popup__label label" for="email_log">Full Name</label>
+							<input class="popup__input input" type="text" id="email_log" name="email_log" data-error="Error" placeholder="Your full Name">
+						</p>
 						<p class="popup__input1  ">
 							<label class="popup__label label" for="email_log">Email</label>
 							<input class="popup__input input" type="text" id="email_log" name="email_log" data-error="Error" placeholder="Your working email">
@@ -852,40 +857,45 @@
 							<label class="popup__label label" for="pass_log">Password</label>
 							<input class="popup__input input" type="password" id="pass_log" name="pass_log" data-error="Error" placeholder="Your Password">
 						</p>
+						<p class="popup__input1  ">
+							<label class="popup__label label" for="pass_log">Confirm Password</label>
+							<input class="popup__input input" type="password" id="pass_log" name="pass_log" data-error="Error" placeholder="Your Password">
+						</p>
 						<div class="popup__checkbox checkbox">
 							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 							<label for="c_1" class="checkbox__label">
-								<p class="checkbox__text">Keep me signed in</p>
+								<p class="checkbox__text">Remember me</p>
 							</label>
-							<a class="popup__linck linck-a" href="#">Forgot password?</a>
 						</div>
-						<button type="submit" class="popup__button button button--orange singin">Sign in</button>
-						<p class="popup__ptext column-row gray-800">Don't have an account?&#160; <a href="#" class="popup__linck linck-a">
-								Sign up</a></p>
-						<hr>
-						<p>Or sign in with</p>
-						<nav class="popup__social social-futer">
-							<ul class="social-futer__list">
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-facebook"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Twitter"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-YouTube"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-telegram"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Instagram"></a>
-								</li>
-								<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Linked"></a>
-								</li>
-							</ul>
-						</nav>
+						<button type="submit" class="popup__button button button--orange  ">Sign up</button>
 					</form>
+					<p class="popup__ptext column-row gray-800">Don't have an account?&#160; <span class="popup__linck linck-a singin">
+							Sign in</span>
+					</p>
+					<hr>
+					<p>Or sign in with</p>
+					<nav class="popup__social social-futer">
+						<ul class="social-futer__list">
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-facebook"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Twitter"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-YouTube"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-telegram"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Instagram"></a>
+							</li>
+							<li class="social-futer__items"><a href="#" class="social-futer__link _icon-Linked"></a>
+							</li>
+						</ul>
+					</nav>
+
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221126112724"></script>
+	<script src="js/app.min.js?_v=20221127080142"></script>
 </body>
 
 </html>

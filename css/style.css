@@ -280,10 +280,10 @@ body::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  z-index: 150;
 }
 
 .popup_show {
-  z-index: 150;
   visibility: visible;
   overflow: auto;
   pointer-events: auto;
@@ -2954,19 +2954,6 @@ body::after {
   transition: all 0.5s ease 0s;
 }
 
-.popup .signinblock {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.popup .signupblock {
-  -webkit-transform: translateX(200%);
-      -ms-transform: translateX(200%);
-          transform: translateX(200%);
-  opacity: 0;
-}
-
 .popup__close {
   position: absolute;
   right: 24px;
@@ -3062,9 +3049,6 @@ body::after {
 
 .popup hr {
   height: 1px;
-  -webkit-transform: translate(-49px);
-      -ms-transform: translate(-49px);
-          transform: translate(-49px);
   width: 125.3%;
   height: 1px;
   background-color: #E5E8ED;
@@ -3086,6 +3070,7 @@ body::after {
 }
 
 .linck-a {
+  cursor: pointer;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -3100,11 +3085,11 @@ body::after {
   text-decoration: underline;
 }
 
-.popup__form p:not(:nth-last-child(-n+6)) .popup__label {
+.popup__form p .popup__label {
   margin-bottom: 8px;
 }
 
-.popup__form p:not(:nth-last-child(-n+6)) .popup__input {
+.popup__form p .popup__input {
   margin-bottom: 20px;
 }
 
@@ -3122,6 +3107,25 @@ p.column-row {
 
 .social-futer {
   margin-top: 16px;
+}
+
+.lock .popup__content {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  -webkit-transform: translateX(60%) scale(0);
+      -ms-transform: translateX(60%) scale(0);
+          transform: translateX(60%) scale(0);
+}
+
+.lock .popup__content.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateX(0) scale(1);
+      -ms-transform: translateX(0) scale(1);
+          transform: translateX(0) scale(1);
 }
 
 .swiper {
@@ -4230,6 +4234,11 @@ p.column-row {
 
   .team-carousel__control {
     display: none;
+  }
+
+  .popup__content {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 

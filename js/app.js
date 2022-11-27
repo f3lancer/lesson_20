@@ -4068,6 +4068,20 @@
             }));
         }
     }), 0);
+    let openIn = document.querySelector(".singup");
+    let openUp = document.querySelector(".singin");
+    let signinblock = document.querySelector(".signinblock");
+    let signupblock = document.querySelector(".signupblock");
+    if (openIn) openIn.onclick = function() {
+        console.log(openIn);
+        signinblock.classList.toggle("active");
+        signupblock.classList.toggle("active");
+    };
+    if (openUp) openUp.onclick = function() {
+        console.log(openUp);
+        signinblock.classList.toggle("active");
+        signupblock.classList.toggle("active");
+    };
     window["FLS"] = true;
     isWebp();
     menuInit();
