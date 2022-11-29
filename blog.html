@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221127181141">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221129123719">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,27 +43,31 @@
 		<main class="page">
 			<section class="page__blog blog-page">
 				<div class="blog-page__container">
-					<div class="blog-page__title title-kontent  ">
+					<div class="blog-page__title title-kontent  title-kontent--center">
 						<h4 class="title-kontent__text">Our blog</h4>
 						<h1 class="title-kontent__title">Createx School Journal</h1>
 					</div>
 					<div class="blog-page__meny">
 						<nav class="blog-page__nav">
 							<ul class="blog-page__list">
-								<li class="blog-page__itams">Articles</li>
-								<li class="blog-page__itams">Videos</li>
-								<li class="blog-page__itams">Podcasts</li>
+								<li class="blog-page__itams active"><a href="#">All</a></li>
+								<li class="blog-page__itams"><a href="#" class="_icon-blog-files">
+										Articles</a></li>
+								<li class="blog-page__itams"><a href="#" class="_icon-blog-play"> Videos</a>
+								</li>
+								<li class="blog-page__itams"><a href="#" class="_icon-blog-mic">
+										Podcasts</a></li>
 							</ul>
 						</nav>
 						<div class="blog-page__filter">
 							<div class="blog-page__category">
 								<form action="#" class="blog-page__formselect  ">
 									<div class="blog-page__cat-text">Blog category</div>
-									<select name="form[]" data-class-modif="form" class="blog-page__select input">
-										<option value="1" selected>Пункт №1</option>
-										<option value="2">Пункт №2</option>
-										<option value="3">Пункт №3</option>
-										<option value="4">Пункт №4</option>
+									<select name="form[]" data-class-modif="form" class="blog-page__select">
+										<option value="1" selected>all themes</option>
+										<option value="2">theme №2</option>
+										<option value="3">theme №3</option>
+										<option value="4">theme №4</option>
 									</select>
 								</form>
 							</div>
@@ -71,7 +75,7 @@
 								<form class="blog-page__formsearch" action="#" method="POST">
 									<!-- <label class="blog-page__label label" for="search_1">search</label> -->
 									<input type="search" id="search_1" name="form[search]" data-error="Error" placeholder="E-mail" class="blog-page__input input">
-									<button type="submit" class="button">Send</button>
+									<button type="submit" class="blog-page__button"></button>
 								</form>
 							</div>
 						</div>
@@ -246,13 +250,32 @@
 					</div>
 					<nav class="block-list__pagination pagination">
 						<ul class="pagination__list">
-							<li class="pagination__atem"><a href="">1</a></li>
-							<li class="pagination__atem"><a href="">2</a></li>
-							<li class="pagination__atem"><a href="">3</a></li>
-							<li class="pagination__atem"><a href="">4</a></li>
-							<li class="pagination__atem"><a href="">5</a></li>
+							<li class="pagination__atem active"><a href="#">1</a></li>
+							<li class="pagination__atem"><a href="#">2</a></li>
+							<li class="pagination__atem"><a href="#">3</a></li>
+							<li class="pagination__atem"><a href="#">4</a></li>
+							<li class="pagination__atem"><a href="#">5</a></li>
 						</ul>
 					</nav>
+				</div>
+			</section>
+			<section class="page__subscribe2 subscribe2-page">
+				<div class="subscribe2-page__container">
+					<div class="subscribe2-page__body">
+						<h2 class="subscribe2-page__title">Want to get the best articles weekly?
+							Subscribe to our newsletter!</h2>
+						<form class="subscribe2-page__form" action="files/sendmail/sendmail.php" method="POST">
+							<!-- <label class="subscribe-page__label" for="email_1">email*</label> -->
+							<input type="text" id="subscribe2-page" name="form[email]" data-error="Error" placeholder="Your working email" class="subscribe2-page__input input">
+							<button type="submit" class="subscribe2-page__button button button--orange">Subscribe</button>
+							<div class="subscribe2-page__checkbox checkbox">
+								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">I agree to receive
+										communications from Createx Online School</span></label>
+							</div>
+
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -429,7 +452,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221127181141"></script>
+	<script src="js/app.min.js?_v=20221129123719"></script>
 </body>
 
 </html>
