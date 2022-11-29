@@ -3497,7 +3497,7 @@ p.column-row {
   margin-top: 16px;
 }
 
-.lock .popup__content {
+.popup-show .popup__content {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 1s ease 0s;
@@ -3508,7 +3508,7 @@ p.column-row {
           transform: translateX(60%) scale(0);
 }
 
-.lock .popup__content.active {
+.popup-show .popup__content.active {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateX(0) scale(1);
