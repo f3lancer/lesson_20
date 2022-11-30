@@ -4465,6 +4465,21 @@
         signinblock.classList.toggle("active");
         signupblock.classList.toggle("active");
     };
+    let list = document.querySelector(".list");
+    let grid = document.querySelector(".grid");
+    let containerlist = document.querySelector(".containerlist");
+    if (list) list.onclick = function() {
+        console.log(list);
+        list.classList.add("active");
+        containerlist.classList.remove("grid");
+        grid.classList.remove("active");
+    };
+    if (grid) grid.onclick = function() {
+        console.log(grid);
+        containerlist.classList.add("grid");
+        grid.classList.add("active");
+        list.classList.remove("active");
+    };
     window["FLS"] = true;
     isWebp();
     menuInit();
