@@ -530,6 +530,10 @@
         }
     }
     modules_flsModules.popup = new Popup({});
+    let accordionbut = document.querySelectorAll(".accordion__title");
+    for (let i = 0; i < accordionbut.length; i++) accordionbut[i].onclick = function() {
+        this.parentElement.classList.toggle("active");
+    };
     let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
         const targetBlockElement = document.querySelector(targetBlock);
         if (targetBlockElement) {
